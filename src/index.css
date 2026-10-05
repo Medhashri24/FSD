@@ -1,0 +1,304 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family:Arial, Helvetica, sans-serif,
+    sans-serif;
+  color: #d12b01;
+  background: #f5f8f3;
+}
+
+body {
+  min-width: 320px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: min(1120px, 90%);
+  margin: 0 auto;
+}
+
+/* Navbar */
+
+.navbar {
+  background: #ffffff;
+  border-bottom: 1px solid #e5ebe3;
+}
+
+.nav-content {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.logo span {
+  color: #d84910;
+  margin-left: 4px;
+}
+
+nav {
+  display: flex;
+  gap: 32px;
+}
+
+nav a {
+  color: #d6e04b;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: #e0c133;
+}
+
+/* Hero */
+
+.hero {
+  min-height: calc(100vh - 76px);
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at 80% 20%, #d9efd9, transparent 30%),
+    #f5f8f3;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  align-items: center;
+  gap: 80px;
+}
+
+.eyebrow {
+  color: #c3df25;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+h1 {
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  line-height: 0.98;
+  letter-spacing: -3px;
+  margin-bottom: 28px;
+}
+
+h1 span {
+  color: #d1ce0c;
+  display: block;
+}
+
+.hero-description,
+.lead {
+  max-width: 650px;
+  color: #607568;
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  margin-top: 36px;
+}
+
+.btn {
+  display: inline-block;
+  border: 0;
+  border-radius: 10px;
+  padding: 14px 24px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-primary {
+  background: #bfdf0b;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #e4e70e;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: white;
+  color: #bbe408;
+  border: 1px solid #cbdccc;
+}
+
+.btn-secondary:hover {
+  background: #edf6ee;
+}
+
+/* Hero card */
+
+.hero-card {
+  background: white;
+  padding: 48px;
+  border-radius: 28px;
+  box-shadow: 0 20px 60px rgba(35, 75, 45, 0.1);
+  text-align: center;
+}
+
+
+.hero-card h2 {
+  margin-bottom: 12px;
+  font-size: 1.6rem;
+}
+
+.hero-card p {
+  color: #718175;
+  line-height: 1.7;
+}
+
+/* Pages */
+
+.page-section {
+  min-height: calc(100vh - 136px);
+  padding: 100px 0;
+}
+
+.page-section h1 {
+  max-width: 850px;
+  font-size: clamp(2.8rem, 5vw, 4.8rem);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 60px;
+}
+
+.card {
+  background: white;
+  padding: 36px;
+  border-radius: 20px;
+  border: 1px solid #e4ebe3;
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: #68786c;
+  line-height: 1.7;
+}
+
+/* Contact */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.contact-info {
+  margin-top: 32px;
+  display: grid;
+  gap: 16px;
+  color: #e28d0e;
+}
+
+.contact-form {
+  background: white;
+  padding: 36px;
+  border-radius: 20px;
+  border: 1px solid #e3eae2;
+  display: grid;
+  gap: 20px;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 8px;
+  font-weight: 700;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid #d4dfd5;
+  border-radius: 8px;
+  padding: 13px;
+  font: inherit;
+  outline: none;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ddb70d;
+}
+
+/* Footer */
+
+footer {
+  padding: 30px;
+  text-align: center;
+  background: #e7e6e6;
+  color: #cc800e;
+}
+
+/* Responsive */
+
+@media (max-width: 800px) {
+  .nav-content {
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 0;
+  }
+
+  nav {
+    gap: 20px;
+  }
+
+  .hero-content,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .hero {
+    padding: 80px 0;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .page-section {
+    padding: 70px 0;
+  }
+
+  h1 {
+    letter-spacing: -2px;
+  }
+}
